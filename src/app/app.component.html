@@ -3,4 +3,4 @@
   <input class="input" #nameInput (input)="onNameChange(nameInput.value)" />
 </div>
 
-{{ name }}
+{{ name | titlecase }}
