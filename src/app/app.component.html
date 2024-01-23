@@ -76,5 +76,22 @@
     </div>
   </div>
 
-  {{ car | json }}
+  <div class="row">
+    <div class="form-group col">
+      <label>Miles</label>
+      <input
+        type="number"
+        #milesInput
+        class="form-control"
+        (input)="onMilesChange(milesInput.value)"
+      />
+    </div>
+
+    <div class="col">
+      <label><b>Kilometers</b></label>
+      <div>
+        {{ miles | convert : "cm" | number : "1.0-2" }}
+      </div>
+    </div>
+  </div>
 </div>
